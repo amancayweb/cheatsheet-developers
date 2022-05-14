@@ -27,4 +27,4 @@ http://wpfront/wp-admin/options.php -> vemos todos los ajustes que existen en WP
 
 
 
-## Creando página de ocnfiguración personalizada (Renderizando el formulario)
+## Creando página de configuración personalizada (Renderizando el formulario)
