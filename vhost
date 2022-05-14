@@ -1,0 +1,13 @@
+vhost
+
+$ sudo cp /etc/apache2/sites-available/gnulinux.conf /etc/apache2/sites-available/superdev.conf
+
+_ edito archivo
+_ edito hosts
+_ recargo
+  $ sudo systemctl reload apache2
+_ sale andando :)
+
+
+
+

@@ -1,0 +1,64 @@
+// hoja rápida comandos
+https://gist.github.com/hofmannsven/9164408
+
+
+
+// podemos copiar de acá
+URL: http://www.mysqltutorial.org/mysql-cheat-sheet.aspx
+
+
+// Creo base de datos y usuario para esa base
+// mysql8
+
+$ mysql
+
+mysql> CREATE DATABASE namedb;
+
+mysql> CREATE USER 'userdb'@'localhost' IDENTIFIED WITH mysql_native_password BY 'password';
+
+mysql> GRANT SELECT, INSERT, UPDATE, DELETE, CREATE, INDEX, DROP, ALTER, CREATE TEMPORARY TABLES, LOCK TABLES ON namedb.* TO 'userdb'@'localhost';
+
+
+
+// Creación y permisos a user -> OBSOLETO
+// esto es para versiones de mysql 5.6 o menores... luego se actualizaron
+CREATE USER 'user'@'hostname';
+GRANT ALL PRIVILEGES ON dbTest.* To 'user'@'hostname' IDENTIFIED BY 'password';
+GRANT ALL PRIVILEGES ON baco_dbpanelvinos.* To 'baco_usrvinostestdb'@'localhost' IDENTIFIED BY 'ghs4565SFG4509';
+
+
+// mysql8
+
+CREATE USER 'baco_usrvinostestdb'@'localhost' IDENTIFIED BY 'ghs4565SFG4509';
+GRANT ALL ON baco_usrvinostestdb.* TO 'baco_usrvinostestdb'@'localhost';
+
+
+// Exportar todas las bases de datos (para hacer backup total)
+mysqldump -u root -p --all-databases > alldb.sql
+
+
+// Exportar DB
+mysqldump -u root -p namedatabase > filename.sql
+
+
+// exportar varias tablas sin crear la DB y sin tocar la estructura, solamente exporta data
+mysqldump --no-create-db --no-create-info --verbose -u root -p database table1 table2 > /var/www/html/whmcs813/docs/example-dump.sql
+
+
+// Importar DB
+mysql -u username -p new_database < data-dump.sql
+
+// Ver en tiempo real las consultas que se ejecutan
+https://stackoverflow.com/questions/5441972/how-to-see-log-files-in-mysql/22812417
+
+
+// ir viendo en tiempo real los logs seleccionando palabras
+tail -f /var/log/mysql.log | egrep -wi --color 'tblinvoices|ws_sync'
+
+
+// Problemas con la clave de root
+https://www.digitalocean.com/community/tutorials/how-to-install-mysql-on-ubuntu-20-04-es
+
+// validación de claves en phpmyadmin... no me dejaba pasar.. solución:
+https://stackoverflow.com/questions/36301100/how-do-i-turn-off-the-mysql-password-validation
+

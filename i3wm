@@ -1,0 +1,28 @@
+
+
+Activar Sonido
+
+$ pactl list short sinks
+0   alsa_output.pci-0000_00_1b.0.analog-stereo  module-alsa-card.c  s16le 2ch 44100Hz   RUNNING
+1   alsa_output.platform-snd_aloop.0.analog-stereo  module-alsa-card.c  s16le 2ch 44100Hz   SUSPENDED
+
+$ pacmd set-default-sink "0"
+
+$ pulseaudio -k
+
+-------------------------------------------------------------------
+
+Para poder ubicar las aplicaciones en los diferentes escritorios podemos probar con:
+https://github.com/yedhink/dotfiles_ikigai/blob/master/scripts/init_workspace.sh
+
+
+------------------------------------------------------
+
+Podemos ver el siguiente tutorial para activar microfono
+
+
+
+# para ver si me contestan, puse el error que me dá al tratar de instalar i3-gaps
+https://gist.github.com/chewwt/cbdb71b92b9a45e3ac9314e64c58cbf4
+
+
