@@ -28,25 +28,32 @@ https://stackoverflow.com/questions/1274057/how-can-i-make-git-forget-about-a-fi
 
 # CONFIGURE TOOLING
 -----------------
-Configure user information for all local repositories
+
+## Configure user information for all local repositories
 $ git config --global user.name "[name]"
-Sets the name you want atached to your commit transactions
+
+## Sets the name you want atached to your commit transactions
 $ git config --global user.email "[email address]"
-Sets the email you want atached to your commit transactions
+
+## Sets the email you want atached to your commit transactions
 $ git config --global color.ui auto
+
 Enables helpful colorization of command line output
 
 # CREATE REPOSITORIES
 -------------------
-Start a new repository or obtain one from an existing URL
+
+## Start a new repository or obtain one from an existing URL
 $ git init [project-name]
-Creates a new local repository with the specified name
+
+## Creates a new local repository with the specified name
 $ git clone [url]
 Downloads a project and its entire version history
 
 # MAKE CHANGES
 ------------
-Review edits and craf a commit transaction
+
+## Review edits and craf a commit transaction
 $ git status
 Lists all new or modified files to be commited
 $ git add [file]
