@@ -2,7 +2,7 @@
 
 
 
-Sacar otras credenciales/tokens para utilizar directamente git (sin claves)
+# Sacar otras credenciales/tokens para utilizar directamente git (sin claves)
 --------------------------------------------------------------
 Debemos ir a githu.com en nuestra cuenta
 A la derecha, nuestro ícono, seleccionamos "settings"
@@ -11,12 +11,12 @@ Luego "Personal Access tokens"
 
 
 
-Configurar credenciales en cache x un día entero, acá en la config global
+# Configurar credenciales en cache x un día entero, acá en la config global
 -------------------------------------------------------------------------
 $ git config --global credential.helper "cache --timeout=86400"
 
 
-Ver los archivos modificados entre dos commits
+# Ver los archivos modificados entre dos commits
 ----------------------------------------------
 $ git diff --name-only SHA1 SHA2
 
