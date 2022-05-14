@@ -29,12 +29,14 @@ son uno de los dos tipos de hooks
 
 crear una funcion callback y otra add_action() 'nombre de la accion' / 'nombre de la funcion q llama'
 se le puede pasar la prioridad y cantidad de args aceptados...
-add_action (
+
+`add_action (
             string $tag,
         callable $function,
         int $priority = 10,
         int $accepted_args = 2   
     )
+`
 
 antes de esto debe haber un
 do_action('save_post', $parms1, $parms2);
@@ -49,26 +51,34 @@ entonces acá llamamos a la función, con prioridad de 10 y pasando 2 argumentos
 
 
 
-## Filters Hooks-----------------------------------------
+## Filters Hooks
+-------------
+
+
 se modifica data de otras acciones.
 estos filtros están preparados para trabajar de manera aislada no afectando nada de manera global.
 add_filter()
 
 
 
-## Custom Hooks-------------------------------------------
+## Custom Hooks
+--------
+
 do_action( $tag, $args); -> hook de acción
 apply_filters( $tag, $value, $args); -> hook de filtro
 
 
 
 
-## Removiendo Acciones y Filtros--------------------------
+## Removiendo Acciones y Filtros
+-------
+
 remove_action() -> eliminamos función callback del hook
 remove_all_actions() -> eliminamos todas las funciones callbak del hook
 
 
-## Determinando el gancho actual y la cantidad de ejecución--
+## Determinando el gancho actual y la cantidad de ejecución
+-----------
 Tenemos funciones que nos dice desde que hook nos llamaron, de esta manera una misma func()
 puede ser llamada desde ganchos diferentes.
 Current_action()
